@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>IFE JavaScript Task 02</title>
+  </head>
+<body>
+  <h3>所有城市列表</h3>
+  <ul id="all-list"></ul>
+
+  <h3>污染城市列表</h3>
+  <ul id="aqi-list">
+  </ul>
+  <button id="btn">点击出现空气质量大于60的城市</button>
+
+<script type="text/javascript">
+
+  var aqiData = [
+  ["北京", 90],
+  ["上海", 50],
+  ["福州", 10],
+  ["广州", 50],
+  ["成都", 90],
+  ["西安", 100]
+];
+  var btn = document.getElementById('btn');
+  btn.addEventListener('click', display,false);
+  
+  window.addEventListener('load',getaqi,false);
+
+  // 得到所有的城市数据
+  function getaqi(){
+    var ul = document.getElementById('all-list');
+    for(var i=0; i<aqiData.length; i++){
+      var li = document.createElement('li');
+      li.innerHTML = aqiData[i][0]+"  "+aqiData[i][1];
+      ul.appendChild(li);
+    }
+
+  }
+  // 添加标志位，使点击效果只触发一次。
+  var flag = 1;
+  // 展示空气质量大于60的城市数据。
+  function display(){
+    if(flag){
+      var ul = document.getElementById('aqi-list');
+      len = aqiData.length;
+      for(var i = 0;i<len;i++){
+        if(aqiData[i][1]>=60){
+          var li = document.createElement('li');
+          li.innerHTML = aqiData[i][0];
+          ul.appendChild(li);
+        }
+      }
+    }
+    flag = 0;    
+  }
+
+</script>
+</body>
+</html>
