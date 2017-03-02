@@ -54,7 +54,7 @@ var div  = document.getElementById('container');
 
   //左侧出
   function leftOutFunc(){
-      data.shift(data[0]);
+      data.shift(data);
       div.innerHTML = data.join('');
       return data;
   }
@@ -63,7 +63,7 @@ var div  = document.getElementById('container');
 
   //右侧出
   function rightOutFunc(){
-      data.pop(data.lastChild);
+      data.pop(data);
       div.innerHTML = data.join('');
       return data;
   }
