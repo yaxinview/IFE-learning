@@ -1,0 +1,63 @@
+.container {
+	padding: 20px;
+	background: #eee;
+	border: 1px #999 solid;
+	overflow: hidden;
+	position: relative;
+	min-width: 824px;
+	min-height: 500px;
+}
+
+.left {
+	position: absolute;
+	top: 20px;
+	left: 20px;
+	width: 200px;
+	border: 1px #999 solid;
+	background: white;
+}
+
+.leftp {
+	float: right;
+    margin-right: 15px;
+    margin-top: 20px;
+}
+
+.middle {
+	max-width: 80%;
+	padding:20px 20px;
+	background: white;
+	border: 1px #999 solid; 
+	margin-left: 230px;
+    margin-right: 155px;
+
+}
+
+.img1 {
+	width: 80px;
+	height: 80px;
+	padding: 20px; 
+}
+
+.img2 {
+	width: 80px;
+	height: 80px;
+	padding: 10px 20px; 
+}
+
+li {
+	list-style: none;
+}
+
+ul {
+	padding: 0;
+	margin: 0;
+}
+
+.right {
+	position: absolute;
+	right: 20px;
+	top: 20px;
+	border: 1px #999 solid; 
+	background: white;
+}
